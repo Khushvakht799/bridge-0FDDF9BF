@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {"id": "jarviz", "type": "ai_assistant", "name": "Джарвис", "features": ["voice", "local"]},
+    {"id": "pc", "type": "hardware", "name": "Персональный компьютер", "ram_gb": 8, "cpu_only": true},
+    {"id": "user", "type": "human", "name": "Пользователь"},
+    {"id": "os", "type": "software", "name": "Операционная система", "compatibility": "any"}
+  ],
+  "vectors": [
+    {
+      "from": "jarviz", 
+      "to": "pc", 
+      "strength": 1.0, 
+      "prob": 1.0, 
+      "relation": "запущен_на",
+      "constraints": ["cpu_only", "ram_8gb_max"]
+    },
+    {
+      "from": "pc", 
+      "to": "os", 
+      "strength": 1.0, 
+      "prob": 1.0, 
+      "relation": "имеет"
+    },
+    {
+      "from": "user", 
+      "to": "jarviz", 
+      "strength": 0.95, 
+      "prob": 0.9, 
+      "relation": "общается_с",
+      "interface": ["voice", "text"]
+    },
+    {
+      "from": "jarviz", 
+      "to": "user", 
+      "strength": 0.9, 
+      "prob": 0.95, 
+      "relation": "отвечает",
+      "response_time_ms": 500
+    }
+  ],
+  "constraints": [
+    {
+      "type": "resource_limit",
+      "target": "pc",
+      "ram_max_gb": 8,
+      "gpu_required": false
+    },
+    {
+      "type": "deployment",
+      "target": "jarviz",
+      "local_only": true,
+      "cloud_hybrid": false
+    }
+  ],
+  "meta": {
+    "source": "ТЗ от пользователя",
+    "date": "2026-02-26",
+    "version": "1.0",
+    "description": "Локальный ИИ помощник типа Джарвис с ограничениями 8GB RAM, только CPU"
+  }
+}

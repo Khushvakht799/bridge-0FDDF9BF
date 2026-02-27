@@ -1,0 +1,5 @@
+Если хочешь развернуть обратно в JSON:
+
+powershell
+python decompiler/bvg_to_jvgr.py manifest/manifest.bvg manifest/manifest.json
+python decompiler/bvg_to_jvgr.py strategy/roadmap.bvg strategy/roadmap.json

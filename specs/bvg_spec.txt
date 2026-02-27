@@ -1,0 +1,29 @@
+# BVG Specification v1.0 (Binary Vector Graph)
+
+## Структура файла:
+
+[HEADER: 28 байт]
+  Magic:        "BVG1"          (4 байта)
+  Version:      0x01             (1 байт)
+  Flags:        Endianness       (1 байт: 0=little,1=big)
+  OffsetNames:  смещение словаря имен (4 байта)
+  OffsetTypes:  смещение словаря типов (4 байта)
+  OffsetData:   смещение данных графа (4 байта)
+  CRC32:        контрольная сумма (4 байта)
+  Reserved:     зарезервировано  (6 байт)
+
+[NAME DICTIONARY]
+  Count:        количество имен (2 байта)
+  Для каждого:
+    Length:     длина имени (1 байт)
+    Name:       символы UTF-8 (Length байт)
+
+[TYPE DICTIONARY]
+  Count:        количество полей (2 байта)
+  Для каждого:
+    NameID:     индекс в Name Dictionary (2 байта)
+    TypeID:     1=float,2=int,3=string (1 байт)
+
+[GRAPH DATA]
+  Узлы и векторы упакованы последовательно
+  Схема упаковки определяется Type Dictionary

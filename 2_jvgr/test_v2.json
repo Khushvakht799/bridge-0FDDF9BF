@@ -1,0 +1,52 @@
+﻿{
+  "nodes": [
+    {
+      "id": "lamp",
+      "type": "device",
+      "state": "on",
+      "intent": "light the room",
+      "meta": {
+        "color": "warm",
+        "brightness": 80,
+        "watt": 60
+      }
+    },
+    {
+      "id": "sensor",
+      "type": "device", 
+      "state": "active",
+      "intent": "detect motion",
+      "meta": {
+        "type": "pir",
+        "range": 5
+      }
+    },
+    {
+      "id": "controller",
+      "type": "hub",
+      "state": "ready",
+      "intent": "coordinate devices"
+    }
+  ],
+  "vectors": [
+    {
+      "from": "controller",
+      "to": "lamp",
+      "strength": 1.0,
+      "prob": 0.95,
+      "intent": "send command",
+      "meta": {
+        "protocol": "zigbee",
+        "channel": 11
+      }
+    },
+    {
+      "from": "sensor",
+      "to": "controller",
+      "strength": 0.9,
+      "prob": 0.98,
+      "state": "triggered",
+      "intent": "report event"
+    }
+  ]
+}

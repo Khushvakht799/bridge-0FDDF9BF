@@ -1,0 +1,173 @@
+﻿{
+  "nodes": [
+    {
+      "id": "bvg_v2_spec",
+      "type": "task",
+      "name": "Спецификация BVG v2",
+      "state": "active",
+      "intent": "Определить формат с обратной совместимостью",
+      "meta": {
+        "priority": 1,
+        "owner": "deepseek",
+        "tags": ["spec", "design"]
+      }
+    },
+    {
+      "id": "compiler_v2",
+      "type": "task",
+      "name": "Компилятор JVGr → BVG v2",
+      "state": "pending",
+      "intent": "Модернизировать jvgr_to_bvg.py для поддержки v2",
+      "meta": {
+        "priority": 2,
+        "depends_on": ["bvg_v2_spec"],
+        "language": "python"
+      }
+    },
+    {
+      "id": "decompiler_v2",
+      "type": "task",
+      "name": "Декомпилятор BVG v2 → JVGr",
+      "state": "pending",
+      "intent": "Модернизировать bvg_to_jvgr.py для поддержки v2",
+      "meta": {
+        "priority": 3,
+        "depends_on": ["bvg_v2_spec"],
+        "language": "python"
+      }
+    },
+    {
+      "id": "hexdump_v2",
+      "type": "task",
+      "name": "Hexdump анализатор для v2",
+      "state": "pending",
+      "intent": "Обновить bvg_hexdump.py для отображения новых полей",
+      "meta": {
+        "priority": 4,
+        "depends_on": ["bvg_v2_spec"],
+        "language": "python"
+      }
+    },
+    {
+      "id": "visualizer",
+      "type": "task",
+      "name": "Визуализатор графов",
+      "state": "pending",
+      "intent": "Создать инструмент для отрисовки BVG графов",
+      "meta": {
+        "priority": 5,
+        "depends_on": ["decompiler_v2"],
+        "options": ["graphviz", "d3.js", "ascii"]
+      }
+    },
+    {
+      "id": "deepseek",
+      "type": "executor",
+      "name": "DeepSeek AI",
+      "state": "ready",
+      "intent": "Выполнить задачи согласно спецификации",
+      "meta": {
+        "capabilities": ["coding", "spec_design", "debugging"]
+      }
+    },
+    {
+      "id": "user",
+      "type": "commander",
+      "name": "Пользователь",
+      "state": "active",
+      "intent": "Управлять процессом разработки BVG v2",
+      "meta": {
+        "role": "project_owner",
+        "approval_required": true
+      }
+    }
+  ],
+  "vectors": [
+    {
+      "from": "bvg_v2_spec",
+      "to": "compiler_v2",
+      "strength": 1.0,
+      "prob": 1.0,
+      "relation": "необходим_для",
+      "intent": "Спецификация должна быть готова до начала компилятора"
+    },
+    {
+      "from": "bvg_v2_spec",
+      "to": "decompiler_v2",
+      "strength": 1.0,
+      "prob": 1.0,
+      "relation": "необходим_для",
+      "intent": "Спецификация должна быть готова до начала декомпилятора"
+    },
+    {
+      "from": "bvg_v2_spec",
+      "to": "hexdump_v2",
+      "strength": 1.0,
+      "prob": 1.0,
+      "relation": "необходим_для",
+      "intent": "Спецификация должна быть готова до обновления hexdump"
+    },
+    {
+      "from": "decompiler_v2",
+      "to": "visualizer",
+      "strength": 0.9,
+      "prob": 0.95,
+      "relation": "используется_в",
+      "intent": "Визуализатор использует декомпилятор для чтения BVG"
+    },
+    {
+      "from": "deepseek",
+      "to": "bvg_v2_spec",
+      "strength": 1.0,
+      "prob": 1.0,
+      "relation": "выполняет",
+      "state": "active",
+      "intent": "DeepSeik пишет спецификацию"
+    },
+    {
+      "from": "deepseek",
+      "to": "compiler_v2",
+      "strength": 0.8,
+      "prob": 0.9,
+      "relation": "выполнит_после",
+      "intent": "DeepSeik напишет компилятор после утверждения спецификации",
+      "meta": {
+        "depends_on": ["user_approval"]
+      }
+    },
+    {
+      "from": "user",
+      "to": "deepseek",
+      "strength": 1.0,
+      "prob": 1.0,
+      "relation": "управляет",
+      "intent": "Пользователь дает команды и утверждает результаты"
+    },
+    {
+      "from": "user",
+      "to": "bvg_v2_spec",
+      "strength": 0.9,
+      "prob": 1.0,
+      "relation": "утверждает",
+      "intent": "Пользователь проверяет и принимает спецификацию"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "compatibility",
+      "description": "BVG v2 должен читаться v1-ридерами без ошибок (игнорируя новые поля)"
+    },
+    {
+      "type": "timeline",
+      "description": "Сначала спецификация, потом реализация",
+      "sequence": ["bvg_v2_spec", "compiler_v2", "decompiler_v2", "hexdump_v2", "visualizer"]
+    }
+  ],
+  "meta": {
+    "project": "BVG v2 Development",
+    "version": "1.0",
+    "date": "2026-02-26",
+    "status": "approved_by_user",
+    "next_action": "deepseek: написать specs/bvg_v2.txt"
+  }
+}

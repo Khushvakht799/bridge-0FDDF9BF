@@ -1,0 +1,564 @@
+{
+  "nodes": [
+    {
+      "id": "readme_root",
+      "type": "document",
+      "content": {
+        "filename": "README.md",
+        "encoding": "UTF-8",
+        "generated": "2026-02-27",
+        "project": "BRIDGE"
+      }
+    },
+    {
+      "id": "section_title",
+      "type": "markdown",
+      "content": {
+        "level": 1,
+        "text": "🌉 BRIDGE: Бинарный векторный граф — новая природа вычислений"
+      }
+    },
+    {
+      "id": "section_badge",
+      "type": "markdown",
+      "content": {
+        "raw": "![Version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![Status](https://img.shields.io/badge/status-stable-green.svg) ![CRC32](https://img.shields.io/badge/crc32-DEC1DDC7-orange.svg)"
+      }
+    },
+    {
+      "id": "section_manifest",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "📜 Манифест"
+      }
+    },
+    {
+      "id": "manifest_quote",
+      "type": "quote",
+      "content": {
+        "text": "Информация больше не должна храниться — она должна помнить. 99 байт достаточно для передачи смысла, на который раньше требовались мегабайты.",
+        "author": "BRIDGE Collective"
+      }
+    },
+    {
+      "id": "section_overview",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "🔭 Обзор технологии"
+      }
+    },
+    {
+      "id": "overview_paragraph",
+      "type": "paragraph",
+      "content": {
+        "text": "BRIDGE — это не очередной формат данных. Это новая парадигма хранения, передачи и исполнения информации, основанная на принципах семантической плотности, эфемерных процессов и графовой памяти."
+      }
+    },
+    {
+      "id": "feature_1",
+      "type": "feature",
+      "content": {
+        "name": "Семантическая плотность",
+        "description": "BVG упаковывает смысл в 99 байт — в 10-100 раз плотнее JSON/XML"
+      }
+    },
+    {
+      "id": "feature_2",
+      "type": "feature",
+      "content": {
+        "name": "Эфемерные процессы",
+        "description": "Процессы живут только пока нужны, схлопываются, оставляя опыт в evolution"
+      }
+    },
+    {
+      "id": "feature_3",
+      "type": "feature",
+      "content": {
+        "name": "Графовая память",
+        "description": "Данные помнят свою эволюцию — Git устарел"
+      }
+    },
+    {
+      "id": "feature_4",
+      "type": "feature",
+      "content": {
+        "name": "Исполняемый смысл",
+        "description": "BVG-графы могут исполняться в среде Collapse Architecture"
+      }
+    },
+    {
+      "id": "section_architecture",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "🏗 Архитектура"
+      }
+    },
+    {
+      "id": "arch_layer_1",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.0** — язык: узлы, рёбра, intent, state, evolution"
+      }
+    },
+    {
+      "id": "arch_layer_2",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.1** — физиология: многослойная VM, эфемерные процессы, схлопывание"
+      }
+    },
+    {
+      "id": "arch_layer_3",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.2** — сознание: обучение на evolution, усиление связей (в разработке)"
+      }
+    },
+    {
+      "id": "section_components",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "📦 Компоненты BRIDGE"
+      }
+    },
+    {
+      "id": "comp_compiler",
+      "type": "component",
+      "content": {
+        "path": "compiler/jvgr_to_bvg.py",
+        "description": "Компилятор JVGr (JSON) → BVG (бинарный граф)",
+        "usage": "python compiler/jvgr_to_bvg.py input.json output.bvg"
+      }
+    },
+    {
+      "id": "comp_decompiler",
+      "type": "component",
+      "content": {
+        "path": "decompiler/bvg_to_jvgr.py",
+        "description": "Декомпилятор BVG → JVGr",
+        "usage": "python decompiler/bvg_to_jvgr.py input.bvg output.json"
+      }
+    },
+    {
+      "id": "comp_hexdump",
+      "type": "component",
+      "content": {
+        "path": "utils/bvg_hexdump.py",
+        "description": "Анализатор бинарной структуры BVG",
+        "usage": "python utils/bvg_hexdump.py file.bvg"
+      }
+    },
+    {
+      "id": "comp_specs",
+      "type": "component",
+      "content": {
+        "path": "specs/",
+        "description": "Канонические схемы VGr Meta-layer v1.0 и v1.1"
+      }
+    },
+    {
+      "id": "section_format",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "🔧 Формат BVG (Binary Vector Graph)"
+      }
+    },
+    {
+      "id": "format_struct",
+      "type": "code",
+      "content": {
+        "language": "hex",
+        "code": "0000: 42 56 47 31 01 00 1c 00 00 00 43 00 00 00 4b 00  BVG1......C...K.\n0010: 00 00 c7 dd c1 de 00 00 00 00 00 00 05 00 04 6c  ...............l\n0020: 61 6d 70 06 73 65 6e 73 6f 72 0a 63 6f 6e 74 72  amp.sensor.contr\n0030: 6f 6c 6c 65 72 08 73 74 72 65 6e 67 74 68 04 70  oller.strength.p\n0040: 72 6f 62 02 00 03 00 01 04 00 01 02 00 00 00 00  rob.............\n0050: 00 80 3f 33 33 73 3f 01 00 02 00 66 66 66 3f 48  ..?33s?....fff?H\n0060: e1 7a 3f                                         .z?"
+      }
+    },
+    {
+      "id": "format_desc",
+      "type": "paragraph",
+      "content": {
+        "text": "BVG — это бинарное представление семантического графа. В 99 байтах упакованы узлы, рёбра, словарь имён и векторы состояний. CRC32 DEC1DDC7 — цифровой отпечаток технологии."
+      }
+    },
+    {
+      "id": "section_quickstart",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "⚡ Быстрый старт"
+      }
+    },
+    {
+      "id": "quickstep_1",
+      "type": "code",
+      "content": {
+        "language": "powershell",
+        "code": "# Создать JVGr файл (пример в 1_input/)\n# Скомпилировать в BVG\npython compiler/jvgr_to_bvg.py 1_input/example.json 3_bvg/example.bvg\n\n# Посмотреть содержимое\npython utils/bvg_hexdump.py 3_bvg/example.bvg\n\n# Развернуть обратно\npython decompiler/bvg_to_jvgr.py 3_bvg/example.bvg 4_output/example.json"
+      }
+    },
+    {
+      "id": "section_manifest_artefact",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "📦 Артефакты манифеста"
+      }
+    },
+    {
+      "id": "manifest_files",
+      "type": "list",
+      "content": {
+        "items": [
+          "`manifest/manifest.bvg` — бинарный манифест (∼150 байт)",
+          "`manifest/manifest.json` — человекочитаемая версия",
+          "`strategy/roadmap.bvg` — стратегия внедрения",
+          "`strategy/roadmap.json` — дорожная карта"
+        ]
+      }
+    },
+    {
+      "id": "section_principles",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "🧠 Четыре принципа"
+      }
+    },
+    {
+      "id": "principle_1",
+      "type": "principle_full",
+      "content": {
+        "name": "Семантической плотности",
+        "statement": "Минимальный объем — максимальный смысл"
+      }
+    },
+    {
+      "id": "principle_2",
+      "type": "principle_full",
+      "content": {
+        "name": "Схлопывания",
+        "statement": "Все временное исчезает, оставляя только опыт"
+      }
+    },
+    {
+      "id": "principle_3",
+      "type": "principle_full",
+      "content": {
+        "name": "Графовой памяти",
+        "statement": "Связи важнее узлов, эволюция важнее состояний"
+      }
+    },
+    {
+      "id": "principle_4",
+      "type": "principle_full",
+      "content": {
+        "name": "Исполняемого смысла",
+        "statement": "Данные должны уметь действовать, а не только храниться"
+      }
+    },
+    {
+      "id": "section_roadmap",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "🛣 Дорожная карта"
+      }
+    },
+    {
+      "id": "roadmap_phase0",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 0 (Q1-Q2 2026):** Публикация, манифест, заморозка v1.1"
+      }
+    },
+    {
+      "id": "roadmap_phase1",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 1 (Q3-Q4 2026):** Вертикальные внедрения (AI, IoT, Security, DevOps, Science)"
+      }
+    },
+    {
+      "id": "roadmap_phase2",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 2 (2027):** Стандартизация, партнерства, аппаратная поддержка"
+      }
+    },
+    {
+      "id": "roadmap_phase3",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 3 (2028):** Экосистема (BVG PM, Runtime, Marketplace)"
+      }
+    },
+    {
+      "id": "section_contact",
+      "type": "markdown",
+      "content": {
+        "level": 2,
+        "text": "📬 Контакты"
+      }
+    },
+    {
+      "id": "contact_info",
+      "type": "paragraph",
+      "content": {
+        "text": "Манифест: manifest@bridge.tech\nИнвестиции: invest@bridge.tech\nРепозиторий: github.com/bridge/bvg\nCRC32 маяк: DEC1DDC7"
+      }
+    },
+    {
+      "id": "footer",
+      "type": "markdown",
+      "content": {
+        "raw": "---\n*BRIDGE — информация обретает память. 99 байт изменили всё.*"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_root_to_title",
+      "source": "readme_root",
+      "target": "section_title",
+      "type": "contains"
+    },
+    {
+      "id": "e_root_to_badge",
+      "source": "readme_root",
+      "target": "section_badge",
+      "type": "contains"
+    },
+    {
+      "id": "e_root_to_manifest",
+      "source": "readme_root",
+      "target": "section_manifest",
+      "type": "contains"
+    },
+    {
+      "id": "e_manifest_to_quote",
+      "source": "section_manifest",
+      "target": "manifest_quote",
+      "type": "includes"
+    },
+    {
+      "id": "e_root_to_overview",
+      "source": "readme_root",
+      "target": "section_overview",
+      "type": "contains"
+    },
+    {
+      "id": "e_overview_to_para",
+      "source": "section_overview",
+      "target": "overview_paragraph",
+      "type": "includes"
+    },
+    {
+      "id": "e_overview_to_feature1",
+      "source": "section_overview",
+      "target": "feature_1",
+      "type": "describes"
+    },
+    {
+      "id": "e_overview_to_feature2",
+      "source": "section_overview",
+      "target": "feature_2",
+      "type": "describes"
+    },
+    {
+      "id": "e_overview_to_feature3",
+      "source": "section_overview",
+      "target": "feature_3",
+      "type": "describes"
+    },
+    {
+      "id": "e_overview_to_feature4",
+      "source": "section_overview",
+      "target": "feature_4",
+      "type": "describes"
+    },
+    {
+      "id": "e_root_to_arch",
+      "source": "readme_root",
+      "target": "section_architecture",
+      "type": "contains"
+    },
+    {
+      "id": "e_arch_to_layer1",
+      "source": "section_architecture",
+      "target": "arch_layer_1",
+      "type": "lists"
+    },
+    {
+      "id": "e_arch_to_layer2",
+      "source": "section_architecture",
+      "target": "arch_layer_2",
+      "type": "lists"
+    },
+    {
+      "id": "e_arch_to_layer3",
+      "source": "section_architecture",
+      "target": "arch_layer_3",
+      "type": "lists"
+    },
+    {
+      "id": "e_root_to_components",
+      "source": "readme_root",
+      "target": "section_components",
+      "type": "contains"
+    },
+    {
+      "id": "e_components_to_comp1",
+      "source": "section_components",
+      "target": "comp_compiler",
+      "type": "includes"
+    },
+    {
+      "id": "e_components_to_comp2",
+      "source": "section_components",
+      "target": "comp_decompiler",
+      "type": "includes"
+    },
+    {
+      "id": "e_components_to_comp3",
+      "source": "section_components",
+      "target": "comp_hexdump",
+      "type": "includes"
+    },
+    {
+      "id": "e_components_to_comp4",
+      "source": "section_components",
+      "target": "comp_specs",
+      "type": "includes"
+    },
+    {
+      "id": "e_root_to_format",
+      "source": "readme_root",
+      "target": "section_format",
+      "type": "contains"
+    },
+    {
+      "id": "e_format_to_code",
+      "source": "section_format",
+      "target": "format_struct",
+      "type": "shows"
+    },
+    {
+      "id": "e_format_to_desc",
+      "source": "section_format",
+      "target": "format_desc",
+      "type": "explains"
+    },
+    {
+      "id": "e_root_to_quick",
+      "source": "readme_root",
+      "target": "section_quickstart",
+      "type": "contains"
+    },
+    {
+      "id": "e_quick_to_code",
+      "source": "section_quickstart",
+      "target": "quickstep_1",
+      "type": "demonstrates"
+    },
+    {
+      "id": "e_root_to_artefact",
+      "source": "readme_root",
+      "target": "section_manifest_artefact",
+      "type": "contains"
+    },
+    {
+      "id": "e_artefact_to_list",
+      "source": "section_manifest_artefact",
+      "target": "manifest_files",
+      "type": "shows"
+    },
+    {
+      "id": "e_root_to_principles",
+      "source": "readme_root",
+      "target": "section_principles",
+      "type": "contains"
+    },
+    {
+      "id": "e_principles_to_p1",
+      "source": "section_principles",
+      "target": "principle_1",
+      "type": "enumerates"
+    },
+    {
+      "id": "e_principles_to_p2",
+      "source": "section_principles",
+      "target": "principle_2",
+      "type": "enumerates"
+    },
+    {
+      "id": "e_principles_to_p3",
+      "source": "section_principles",
+      "target": "principle_3",
+      "type": "enumerates"
+    },
+    {
+      "id": "e_principles_to_p4",
+      "source": "section_principles",
+      "target": "principle_4",
+      "type": "enumerates"
+    },
+    {
+      "id": "e_root_to_roadmap",
+      "source": "readme_root",
+      "target": "section_roadmap",
+      "type": "contains"
+    },
+    {
+      "id": "e_roadmap_to_r0",
+      "source": "section_roadmap",
+      "target": "roadmap_phase0",
+      "type": "lists"
+    },
+    {
+      "id": "e_roadmap_to_r1",
+      "source": "section_roadmap",
+      "target": "roadmap_phase1",
+      "type": "lists"
+    },
+    {
+      "id": "e_roadmap_to_r2",
+      "source": "section_roadmap",
+      "target": "roadmap_phase2",
+      "type": "lists"
+    },
+    {
+      "id": "e_roadmap_to_r3",
+      "source": "section_roadmap",
+      "target": "roadmap_phase3",
+      "type": "lists"
+    },
+    {
+      "id": "e_root_to_contact",
+      "source": "readme_root",
+      "target": "section_contact",
+      "type": "contains"
+    },
+    {
+      "id": "e_contact_to_info",
+      "source": "section_contact",
+      "target": "contact_info",
+      "type": "provides"
+    },
+    {
+      "id": "e_root_to_footer",
+      "source": "readme_root",
+      "target": "footer",
+      "type": "ends_with"
+    }
+  ]
+}

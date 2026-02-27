@@ -1,0 +1,261 @@
+{
+  "nodes": [
+    {
+      "id": "manifest_core",
+      "type": "document",
+      "content": {
+        "title": "МАНИФЕСТ ТЕХНОЛОГИИ BRIDGE",
+        "subtitle": "Декларация о новой природе вычислений",
+        "version": "1.0.0",
+        "date": "2026-02-27"
+      },
+      "meta": {
+        "intent": {
+          "primary": "proclaim_paradigm",
+          "confidence": 1.0
+        },
+        "state": {
+          "values": {
+            "status": "active",
+            "audience": ["developers", "architects", "visionaries"]
+          }
+        },
+        "evolution": {
+          "version": 1,
+          "history": []
+        }
+      }
+    },
+    {
+      "id": "thesis_01",
+      "type": "thesis",
+      "content": {
+        "statement": "Информация больше не должна храниться — она должна помнить.",
+        "domain": "fundamental"
+      },
+      "meta": {
+        "intent": {
+          "primary": "define_shift",
+          "confidence": 0.98
+        },
+        "state": {
+          "values": {
+            "weight": 0.9
+          }
+        }
+      }
+    },
+    {
+      "id": "thesis_02",
+      "type": "thesis",
+      "content": {
+        "statement": "99 байт достаточно для передачи смысла, на который раньше требовались мегабайты.",
+        "domain": "compression"
+      },
+      "meta": {
+        "intent": {
+          "primary": "demonstrate_efficiency"
+        },
+        "state": {
+          "values": {
+            "bytes": 99,
+            "crc32": "DEC1DDC7"
+          }
+        }
+      }
+    },
+    {
+      "id": "thesis_03",
+      "type": "thesis",
+      "content": {
+        "statement": "Процесс — это мысль. Мысль исполнилась — исчезла. Опыт остался в evolution.",
+        "domain": "ephemeral_computing"
+      },
+      "meta": {
+        "intent": {
+          "primary": "introduce_collapse"
+        }
+      }
+    },
+    {
+      "id": "thesis_04",
+      "type": "thesis",
+      "content": {
+        "statement": "Эволюция данных важнее версий. Git устарел — будущее за графовой памятью.",
+        "domain": "versioning"
+      },
+      "meta": {
+        "intent": {
+          "primary": "redefine_versioning"
+        }
+      }
+    },
+    {
+      "id": "thesis_05",
+      "type": "thesis",
+      "content": {
+        "statement": "Искусственный интеллект должен обмениваться мыслями, а не токенами.",
+        "domain": "ai_communication"
+      },
+      "meta": {
+        "intent": {
+          "primary": "enable_agent_telepathy"
+        }
+      }
+    },
+    {
+      "id": "principle_01",
+      "type": "principle",
+      "content": {
+        "name": "Принцип семантической плотности",
+        "description": "Минимальный объем — максимальный смысл"
+      }
+    },
+    {
+      "id": "principle_02",
+      "type": "principle",
+      "content": {
+        "name": "Принцип схлопывания",
+        "description": "Все временное исчезает, оставляя только опыт"
+      }
+    },
+    {
+      "id": "principle_03",
+      "type": "principle",
+      "content": {
+        "name": "Принцип графовой памяти",
+        "description": "Связи важнее узлов, эволюция важнее состояний"
+      }
+    },
+    {
+      "id": "principle_04",
+      "type": "principle",
+      "content": {
+        "name": "Принцип исполняемого смысла",
+        "description": "Данные должны уметь действовать, а не только храниться"
+      }
+    },
+    {
+      "id": "call_to_action",
+      "type": "action",
+      "content": {
+        "what": ["клонируй", "компилируй", "схлопывай", "эволюционируй"],
+        "how": "используй BRIDGE",
+        "why": "потому что будущее не хранят — будущее помнят"
+      },
+      "meta": {
+        "intent": {
+          "primary": "inspire_adoption"
+        }
+      }
+    },
+    {
+      "id": "signature",
+      "type": "metadata",
+      "content": {
+        "author": "BRIDGE Collective",
+        "contact": "manifest@bridge.tech",
+        "checksum": "DEC1DDC7",
+        "宣言": "信息不再需要存储——信息将会记忆"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_manifest_to_thesis1",
+      "source": "manifest_core",
+      "target": "thesis_01",
+      "directed": true,
+      "weight": 1.0,
+      "type": "contains"
+    },
+    {
+      "id": "edge_manifest_to_thesis2",
+      "source": "manifest_core",
+      "target": "thesis_02",
+      "directed": true,
+      "weight": 1.0,
+      "type": "contains"
+    },
+    {
+      "id": "edge_manifest_to_thesis3",
+      "source": "manifest_core",
+      "target": "thesis_03",
+      "directed": true,
+      "weight": 1.0,
+      "type": "contains"
+    },
+    {
+      "id": "edge_manifest_to_thesis4",
+      "source": "manifest_core",
+      "target": "thesis_04",
+      "directed": true,
+      "weight": 1.0,
+      "type": "contains"
+    },
+    {
+      "id": "edge_manifest_to_thesis5",
+      "source": "manifest_core",
+      "target": "thesis_05",
+      "directed": true,
+      "weight": 1.0,
+      "type": "contains"
+    },
+    {
+      "id": "edge_manifest_to_principle1",
+      "source": "manifest_core",
+      "target": "principle_01",
+      "directed": true,
+      "weight": 1.0,
+      "type": "defines"
+    },
+    {
+      "id": "edge_manifest_to_principle2",
+      "source": "manifest_core",
+      "target": "principle_02",
+      "directed": true,
+      "weight": 1.0,
+      "type": "defines"
+    },
+    {
+      "id": "edge_manifest_to_principle3",
+      "source": "manifest_core",
+      "target": "principle_03",
+      "directed": true,
+      "weight": 1.0,
+      "type": "defines"
+    },
+    {
+      "id": "edge_manifest_to_principle4",
+      "source": "manifest_core",
+      "target": "principle_04",
+      "directed": true,
+      "weight": 1.0,
+      "type": "defines"
+    },
+    {
+      "id": "edge_principles_to_action",
+      "source": "principle_04",
+      "target": "call_to_action",
+      "directed": true,
+      "weight": 0.95,
+      "type": "leads_to"
+    },
+    {
+      "id": "edge_action_to_signature",
+      "source": "call_to_action",
+      "target": "signature",
+      "directed": true,
+      "weight": 0.8,
+      "type": "authenticates"
+    },
+    {
+      "id": "edge_thesis2_to_crc",
+      "source": "thesis_02",
+      "target": "signature",
+      "directed": false,
+      "weight": 0.99,
+      "type": "verified_by"
+    }
+  ]
+}

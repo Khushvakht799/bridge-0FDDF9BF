@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "markdown_h1",
+      "content": "🌉 BRIDGE: Бинарный векторный граф — новая природа вычислений"
+    },
+    {
+      "id": "badge",
+      "type": "markdown_raw",
+      "content": "![Version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![Status](https://img.shields.io/badge/status-stable-green.svg) ![CRC32](https://img.shields.io/badge/crc32-DEC1DDC7-orange.svg)\n"
+    },
+    {
+      "id": "manifest_title",
+      "type": "markdown_h2",
+      "content": "📜 Манифест"
+    },
+    {
+      "id": "manifest_quote",
+      "type": "quote",
+      "content": {
+        "text": "Информация больше не должна храниться — она должна помнить. 99 байт достаточно для передачи смысла, на который раньше требовались мегабайты.",
+        "author": "BRIDGE Collective"
+      }
+    },
+    {
+      "id": "overview_title",
+      "type": "markdown_h2",
+      "content": "🔭 Обзор технологии"
+    },
+    {
+      "id": "overview_text",
+      "type": "paragraph",
+      "content": "BRIDGE — это не очередной формат данных. Это новая парадигма хранения, передачи и исполнения информации, основанная на принципах семантической плотности, эфемерных процессов и графовой памяти."
+    },
+    {
+      "id": "feature1",
+      "type": "feature",
+      "content": {
+        "name": "Семантическая плотность",
+        "description": "BVG упаковывает смысл в 99 байт — в 10-100 раз плотнее JSON/XML"
+      }
+    },
+    {
+      "id": "feature2",
+      "type": "feature",
+      "content": {
+        "name": "Эфемерные процессы",
+        "description": "Процессы живут только пока нужны, схлопываются, оставляя опыт в evolution"
+      }
+    },
+    {
+      "id": "feature3",
+      "type": "feature",
+      "content": {
+        "name": "Графовая память",
+        "description": "Данные помнят свою эволюцию — Git устарел"
+      }
+    },
+    {
+      "id": "feature4",
+      "type": "feature",
+      "content": {
+        "name": "Исполняемый смысл",
+        "description": "BVG-графы могут исполняться в среде Collapse Architecture"
+      }
+    },
+    {
+      "id": "arch_title",
+      "type": "markdown_h2",
+      "content": "🏗 Архитектура"
+    },
+    {
+      "id": "arch1",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.0** — язык: узлы, рёбра, intent, state, evolution"
+      }
+    },
+    {
+      "id": "arch2",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.1** — физиология: многослойная VM, эфемерные процессы, схлопывание"
+      }
+    },
+    {
+      "id": "arch3",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**VGr Meta-layer v1.2** — сознание: обучение на evolution, усиление связей (в разработке)"
+      }
+    },
+    {
+      "id": "components_title",
+      "type": "markdown_h2",
+      "content": "📦 Компоненты BRIDGE"
+    },
+    {
+      "id": "comp1",
+      "type": "component",
+      "content": {
+        "path": "compiler/jvgr_to_bvg.py",
+        "description": "Компилятор JVGr (JSON) → BVG (бинарный граф)",
+        "usage": "python compiler/jvgr_to_bvg.py input.json output.bvg"
+      }
+    },
+    {
+      "id": "comp2",
+      "type": "component",
+      "content": {
+        "path": "decompiler/bvg_to_jvgr.py",
+        "description": "Декомпилятор BVG → JVGr (в разработке)",
+        "usage": "python decompiler/bvg_to_jvgr.py input.bvg output.json"
+      }
+    },
+    {
+      "id": "comp3",
+      "type": "component",
+      "content": {
+        "path": "utils/bvg_hexdump.py",
+        "description": "Анализатор бинарной структуры BVG",
+        "usage": "python utils/bvg_hexdump.py file.bvg"
+      }
+    },
+    {
+      "id": "format_title",
+      "type": "markdown_h2",
+      "content": "🔧 Формат BVG (Binary Vector Graph)"
+    },
+    {
+      "id": "format_hex",
+      "type": "code",
+      "content": {
+        "language": "hex",
+        "code": "0000: 42 56 47 31 01 00 1c 00 00 00 43 00 00 00 4b 00  BVG1......C...K.\n0010: 00 00 c7 dd c1 de 00 00 00 00 00 00 05 00 04 6c  ...............l\n0020: 61 6d 70 06 73 65 6e 73 6f 72 0a 63 6f 6e 74 72  amp.sensor.contr\n0030: 6f 6c 6c 65 72 08 73 74 72 65 6e 67 74 68 04 70  oller.strength.p\n0040: 72 6f 62 02 00 03 00 01 04 00 01 02 00 00 00 00  rob.............\n0050: 00 80 3f 33 33 73 3f 01 00 02 00 66 66 66 3f 48  ..?33s?....fff?H\n0060: e1 7a 3f                                         .z?"
+      }
+    },
+    {
+      "id": "format_desc",
+      "type": "paragraph",
+      "content": "BVG — это бинарное представление семантического графа. В 99 байтах упакованы узлы, рёбра, словарь имён и векторы состояний. CRC32 DEC1DDC7 — цифровой отпечаток технологии."
+    },
+    {
+      "id": "quickstart_title",
+      "type": "markdown_h2",
+      "content": "⚡ Быстрый старт"
+    },
+    {
+      "id": "quickstart_code",
+      "type": "code",
+      "content": {
+        "language": "powershell",
+        "code": "# Создать JVGr файл (пример в 1_input/)\n# Скомпилировать в BVG\npython compiler/jvgr_to_bvg.py 1_input/example.json 3_bvg/example.bvg\n\n# Посмотреть содержимое\npython utils/bvg_hexdump.py 3_bvg/example.bvg\n\n# Развернуть обратно\npython decompiler/bvg_to_jvgr.py 3_bvg/example.bvg 4_output/example.json"
+      }
+    },
+    {
+      "id": "principles_title",
+      "type": "markdown_h2",
+      "content": "🧠 Четыре принципа"
+    },
+    {
+      "id": "principle1",
+      "type": "principle",
+      "content": {
+        "name": "Семантической плотности",
+        "statement": "Минимальный объем — максимальный смысл"
+      }
+    },
+    {
+      "id": "principle2",
+      "type": "principle",
+      "content": {
+        "name": "Схлопывания",
+        "statement": "Все временное исчезает, оставляя только опыт"
+      }
+    },
+    {
+      "id": "principle3",
+      "type": "principle",
+      "content": {
+        "name": "Графовой памяти",
+        "statement": "Связи важнее узлов, эволюция важнее состояний"
+      }
+    },
+    {
+      "id": "principle4",
+      "type": "principle",
+      "content": {
+        "name": "Исполняемого смысла",
+        "statement": "Данные должны уметь действовать, а не только храниться"
+      }
+    },
+    {
+      "id": "roadmap_title",
+      "type": "markdown_h2",
+      "content": "🛣 Дорожная карта"
+    },
+    {
+      "id": "roadmap0",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 0 (Q1-Q2 2026):** Публикация, манифест, заморозка v1.1"
+      }
+    },
+    {
+      "id": "roadmap1",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 1 (Q3-Q4 2026):** Вертикальные внедрения (AI, IoT, Security, DevOps, Science)"
+      }
+    },
+    {
+      "id": "roadmap2",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 2 (2027):** Стандартизация, партнерства, аппаратная поддержка"
+      }
+    },
+    {
+      "id": "roadmap3",
+      "type": "list_item",
+      "content": {
+        "level": 0,
+        "text": "**Фаза 3 (2028):** Экосистема (BVG PM, Runtime, Marketplace)"
+      }
+    },
+    {
+      "id": "contact_title",
+      "type": "markdown_h2",
+      "content": "📬 Контакты"
+    },
+    {
+      "id": "contact_text",
+      "type": "paragraph",
+      "content": "Манифест: manifest@bridge.tech\nИнвестиции: invest@bridge.tech\nРепозиторий: github.com/bridge/bvg\nCRC32 маяк: DEC1DDC7"
+    },
+    {
+      "id": "footer",
+      "type": "markdown_raw",
+      "content": "\n---\n*BRIDGE — информация обретает память. 99 байт изменили всё.*"
+    }
+  ]
+}
