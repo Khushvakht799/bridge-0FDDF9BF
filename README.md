@@ -71,3 +71,7 @@ CRC32 маяк: DEC1DDC7
 
 ---
 *BRIDGE — информация обретает память. 99 байт изменили всё.*
+## 📱 Messenger SDK
+
+👉 **[bridge-messenger-sdk](https://github.com/Khushvakht799/bridge-messenger-sdk)** — открытые модули для интеграции BVG в мессенджеры (Android, iOS, Web, сервер).
+
